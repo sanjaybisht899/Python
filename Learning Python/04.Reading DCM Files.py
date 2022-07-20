@@ -1,3 +1,4 @@
+from ast import For
 import matplotlib.pyplot as plt
 import pydicom
 import pydicom.data
@@ -16,5 +17,12 @@ ds = pydicom.dcmread(filename)
 
 # file1.write(ds.decode)
 # file1.close() 
-print(ds)
+
+print(ds['BeamSequence'])
+
+# for i in range(0,7):
+#     print((ds['BeamSequence'][i]))
+
+# for i in range(0,120):
+#     print((ds['BeamSequence'][0]['ControlPointSequence'][0]['BeamLimitingDevicePositionSequence'][2]['LeafJawPositions'][i]),end=" ")
 
